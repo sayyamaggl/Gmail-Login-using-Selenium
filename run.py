@@ -14,7 +14,7 @@ import time
 service = Service(executable_path="chromedriver.exe")
 driver = webdriver.Chrome(service=service)
 
-# driver.get("https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ifkv=AS5LTATnlulK_d303IiO-IgZ9BghzxHQrqA03rPWxyKTjEOcbO78OxOimOj1KCxdz9WOz4AT6lQn&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S487321577%3A1719413009042632&ddm=0")
+
 
 email_id = "identifierId"
 #pass_class = "whsOnd zHQkBf"
@@ -42,11 +42,6 @@ WebDriverWait(driver, 5).until(
 input_element = driver.find_element(By.ID, email_id)
 input_element.send_keys("dump1234.mail@gmail.com" + Keys.ENTER)
 
-#try:
- # element = WebDriverWait(driver,5).until(
-    #EC.presence_of_element_located((By.CLASS_NAME, "whsOnd zHQkBf")))
- #Perform actions on the element
-#except TimeoutException:
 
 
 #driver.implicitly_wait(7)
@@ -58,8 +53,7 @@ WebDriverWait(driver, 5).until(
 input_element = driver.find_element(By.NAME, "Passwd")
 input_element.send_keys("dump@1234mail" + Keys.ENTER)
 
-#Button = driver.find_element(By.CLASS_NAME, "VfPpkd-RLmnJb")
-#Button.click()
+
 
 time.sleep(15)
 
